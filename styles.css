@@ -13,8 +13,7 @@ body, html {
 
 .content {
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
 }
 
 img {
@@ -23,16 +22,29 @@ img {
     margin-right: 20px;
 }
 
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
 .stats-box {
     border: 1px solid #ccc;
     padding: 10px;
     max-width: 300px; /* Adjust width as needed */
-    flex: 1; /* Allow stats box to grow to fill available space */
 }
 
 .stats-box h2 {
     margin: 0 0 10px;
     font-size: 18px;
+}
+
+.stats {
+    display: flex;
+}
+
+.stats .stat {
+    margin-right: 20px;
 }
 
 .navigation {
