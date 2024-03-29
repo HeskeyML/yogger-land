@@ -10,7 +10,6 @@ body, html {
     align-items: center;
     height: 100%;
     overflow: hidden; /* Hide any overflow */
-    padding: 20px; /* Adjust padding as needed */
 }
 
 img {
