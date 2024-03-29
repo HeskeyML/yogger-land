@@ -17,7 +17,7 @@ body, html {
 }
 
 img {
-    max-width: calc(100% - 320px); /* Adjust width to accommodate stats box */
+    max-width: 100%; /* Adjust width to accommodate stats box */
     height: auto;
     margin-right: 20px;
 }
