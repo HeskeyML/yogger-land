@@ -3,18 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choose Your Own Adventure</title>
-    <link rel="stylesheet" href="../styles.css">
+    <title>Welcome to Yoggerland</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <img src="../pictures/spawn.jpg" alt="Scene Image">
-        <div class="navigation">
-            <a href="../index.html" class="arrow">←</a>
-            <a href="path2.html" class="arrow">↑</a>
-            <a href="path3.html" class="arrow">↓</a>
-            <a href="path4.html" class="arrow">→</a>
-        </div>
-    </div>
+    <button onclick="enterYoggerland()">Enter Yoggerland</button>
+
+    <script>
+        function enterYoggerland() {
+            window.location.href = "pages/spawn.html";
+        }
+    </script>
 </body>
 </html>
