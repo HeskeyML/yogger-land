@@ -3,27 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Coming Soon</title>
+    <title>Welcome to Yoggerland</title>
+    <link rel="stylesheet" type="text/css" href="../styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
         }
-        .message {
-            font-size: 24px;
-            color: #333;
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div class="message">
-        Website Coming Soon
-    </div>
+    <button onclick="enterYoggerland()">Enter Yoggerland</button>
+
+    <script>
+        function enterYoggerland() {
+            window.location.href = "pages/yoggerland.html";
+        }
+    </script>
 </body>
 </html>
