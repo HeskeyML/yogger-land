@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="menu-bar">
+        <div class="menu-item" id="menu-item-1">Item 1</div>
+        <div class="menu-item" id="menu-item-2">Item 2</div>
+        <div class="menu-item" id="menu-item-3">Item 3</div>
+    </div>
+
+    <div class="popup" id="popup-1">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup-1')">✕</span>
+            <p>Placeholder text for Item 1</p>
+        </div>
+    </div>
+
+    <div class="popup" id="popup-2">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup-2')">✕</span>
+            <p>Placeholder text for Item 2</p>
+        </div>
+    </div>
+
+    <div class="popup" id="popup-3">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup('popup-3')">✕</span>
+            <p>Placeholder text for Item 3</p>
+        </div>
+    </div>
+
+    <div class="centered-image">
+        <img src="..pictures/spawn.jpg" alt="Centered Image">
+    </div>
+
+    <div class="navigation">
+        <a href="path1.html" class="arrow">←</a>
+        <a href="path2.html" class="arrow">↑</a>
+        <a href="path3.html" class="arrow">↓</a>
+        <a href="path4.html" class="arrow">→</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
