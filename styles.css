@@ -66,8 +66,7 @@ img {
 }
 
 .menu-bar {
-    background-color: #333;
-    padding: 10px 0;
+    padding: 10px;
 }
 
 .menu-bar ul {
@@ -83,7 +82,7 @@ img {
 }
 
 .menu-bar ul li a {
-    color: #fff;
+    color: #555; /* Light grey color */
     text-decoration: none;
     padding: 10px 20px;
     border: 1px solid #fff;
@@ -91,5 +90,5 @@ img {
 }
 
 .menu-bar ul li a:hover {
-    background-color: #555;
+    background-color: #ddd; /* Light grey background on hover */
 }
