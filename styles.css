@@ -13,21 +13,21 @@ body, html {
 
 .content {
     display: flex;
-    flex-wrap: wrap; /* Allow items to wrap if necessary */
+    flex-wrap: wrap;
     align-items: flex-start;
 }
 
 img {
-    max-width: 100%; /* Ensure image doesn't exceed container width */
-    height: auto; /* Maintain aspect ratio */
+    max-width: calc(100% - 320px); /* Adjust width to accommodate stats box */
+    height: auto;
     margin-right: 20px;
 }
 
 .stats-box {
     border: 1px solid #ccc;
     padding: 10px;
+    max-width: 300px; /* Adjust width as needed */
     flex: 1; /* Allow stats box to grow to fill available space */
-    max-width: 300px; /* Set a maximum width to prevent excessive stretching */
 }
 
 .stats-box h2 {
