@@ -3,31 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Yoggerland</title>
-    <link rel="stylesheet" type="text/css" href="../styles.css">
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 20px;
-            cursor: pointer;
-        }
-    </style>
+    <title>Yoggerland - Choose Your Own Adventure</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <button onclick="enterYoggerland()">Enter Yoggerland</button>
+    <div class="container">
+        <img src="../pictures/spawn.jpg" alt="Scene Image">
+        <div class="menu-bar">
+            <ul>
+                <li><a href="#" id="inventoryStats">Inventory & Stats</a></li>
+                <li><a href="#" id="questsInteractions">Quests & Interactions</a></li>
+                <li><a href="#" id="settings">Settings</a></li>
+            </ul>
+        </div>
+        <div class="navigation">
+            <a href="../index.html" class="arrow">←</a>
+            <a href="path2.html" class="arrow">↑</a>
+            <a href="path3.html" class="arrow">↓</a>
+            <a href="path4.html" class="arrow">→</a>
+        </div>
+    </div>
 
-    <script>
-        function enterYoggerland() {
-            window.location.href = "pages/spawn.html";
-        }
-    </script>
+    <!-- Popups -->
+    <div id="inventoryStatsPopup" class="popup">
+        <span class="close">&times;</span>
+        <h2>Inventory & Stats</h2>
+        <p id="inventoryStatsContent">Loading...</p>
+    </div>
+
+    <div id="questsInteractionsPopup" class="popup">
+        <span class="close">&times;</span>
+        <h2>Quests & Interactions</h2>
+        <p id="questsInteractionsContent">Loading...</p>
+    </div>
+
+    <div id="settingsPopup" class="popup">
+        <span class="close">&times;</span>
+        <h2>Settings</h2>
+        <p id="settingsContent">Loading...</p>
+    </div>
+
+    <script src="../script.js"></script>
 </body>
 </html>
