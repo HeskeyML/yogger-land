@@ -10,11 +10,12 @@ body, html {
     align-items: center;
     height: 100%;
     overflow: hidden; /* Hide any overflow */
+    padding: 20px; /* Adjust padding as needed */
 }
 
 img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: calc(100% - 40px); /* Subtract padding from the maximum width */
+    max-height: calc(100% - 40px); /* Subtract padding from the maximum height */
     width: auto;
     height: auto;
     object-fit: contain; /* Prevent stretching by containing the image within its dimensions */
