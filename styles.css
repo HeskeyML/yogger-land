@@ -43,3 +43,15 @@ img {
     left: 0;
     padding: 10px;
 }
+
+.gameButton {
+    display: inline-block;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    border: 1px solid #000;
+    border-radius: 20%;
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    margin: 0 10px; /* Adjust margin as needed */
+}
