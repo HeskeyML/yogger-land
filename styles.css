@@ -55,3 +55,27 @@ img {
     font-size: 15px;
     margin: 0 10px; /* Adjust margin as needed */
 }
+
+.popup {
+    display: none; /* Initially hide the popup */
+    position: fixed; /* Position the popup relative to the viewport */
+    top: 50%; /* Center the popup vertically */
+    left: 50%; /* Center the popup horizontally */
+    transform: translate(-50%, -50%); /* Center the popup exactly */
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000; /* Ensure the popup appears above other content */
+    color: white; /* Text color */
+}
+
+.popup-content {
+    position: relative; /* Ensure the content stays within the popup */
+}
+
+.close {
+    position: absolute; /* Position the close button relative to its parent */
+    top: 5px;
+    right: 5px;
+    cursor: pointer; /* Show pointer cursor on hover */
+}
