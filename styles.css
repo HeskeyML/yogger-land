@@ -39,7 +39,9 @@ img {
 
 .gameButtons {
     position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px;
+    top: 10px;
+    display: flex;
+    justify-content: left;
+    left: 10px;
+    width: 100%;
 }
