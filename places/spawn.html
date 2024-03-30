@@ -11,10 +11,30 @@
     <div class="container">
         <img src="../pictures/spawn.jpg" alt="Your Image">
         <div class="gameButtons">
-            <button id="button1" class=gameButton>Inventory & Stats</button>
-            <button id="button2" class=gameButton>Quests & Interactions</button>
-            <button id="button3" class=gameButton>Locations</button>
+            <button id="button1" class=gameButton onclick="openPopup('popup1')">Inventory & Stats</button>
+            <button id="button2" class=gameButton onclick="openPopup('popup2')">Quests & Interactions</button>
+            <button id="button3" class=gameButton onclick="openPopup('popup3')">Locations</button>
         </div>
+        
+        <div class="popup" id="popup1">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('popup1')">&times;</span>
+                <p>This is popup 1 content.</p>
+            </div>
+        </div>
+        <div class="popup" id="popup2">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('popup2')">&times;</span>
+                <p>This is popup 2 content.</p>
+            </div>
+        </div>
+        <div class="popup" id="popup3">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup('popup3')">&times;</span>
+                <p>This is popup 3 content.</p>
+            </div>
+        </div>
+        
         <div class="navigation">
             <a href="../index.html" class="arrow">←</a>
             <a href="#" class="arrow">↑</a>
@@ -22,6 +42,6 @@
             <a href="lake.html" class="arrow">→</a>
         </div>
     </div>
-    
+    <script src="scripts.js"></script>
 </body>
 </html>
