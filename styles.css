@@ -36,3 +36,10 @@ img {
     font-size: 20px;
     margin: 0 10px; /* Adjust margin as needed */
 }
+
+.gameButtons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
