@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', (event) => {
-    const bgMusic = document.getElementById('bg-music');
+    const bgMusic = document.getElementById('background-music');
 
     // Check if music is already playing
     if (!localStorage.getItem('musicPaused')) {
