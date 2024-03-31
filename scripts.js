@@ -9,7 +9,7 @@ function closePopup(popupId) {
 const musicToggle = document.getElementById('music-toggle');
 const backgroundMusic = document.getElementById('background-music');
 
-let isMusicPlaying = true;
+let isMusicPlaying = false;
 
 musicToggle.addEventListener('click', function() {
     if (isMusicPlaying) {
