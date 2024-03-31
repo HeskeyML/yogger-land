@@ -19,7 +19,7 @@
         <div class="gameButtons">
             <button id="button1" class=gameButton onclick="openPopup('popup1')">Inventory & Stats</button>
             <button id="button2" class=gameButton onclick="openPopup('popup2')">Quests & Interactions</button>
-            <button id="button3" class=gameButton onclick="openPopup('popup3')">Locations</button>
+            <button id="button3" class=gameButton onclick="openPopup('popup3')">Settings</button>
         </div>
         
         <div class="popup" id="popup1">
@@ -38,6 +38,7 @@
             <span class="close" onclick="closePopup('popup3')">&times;</span>
             <div class="popup-content">
                 <p>Locations</p>
+                <button id="music-toggle" onclick="toggleMusic()">Toggle Music</button>
             </div>
         </div>
         
