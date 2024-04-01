@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yoggerland - Choose Your Own Adventure</title>
+<link rel="stylesheet" href="../../styles.css">
+</head>
+    
+<body>
+    <div class="container">
+
+        <audio id="background-music" loop>
+            <source src="../../music/yoggerMusic.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <img src="../../pictures/cobbVillage/barnacresAbandonedHut.png" alt="Your Image">
+        <div class="gameButtons">
+            <button id="button1" class=gameButton onclick="openPopup('popup1')">Inventory & Stats</button>
+            <button id="button2" class=gameButton onclick="openPopup('popup2')">Quests & Interactions</button>
+            <button id="button3" class=gameButton onclick="openPopup('popup3')">Settings & Music</button>
+        </div>
+        
+        <div class="popup" id="popup1">
+            <span class="close" onclick="closePopup('popup1')">&times;</span>
+            <div class="popup-content">
+                <p>Inventory & Stats</p>
+            </div>
+        </div>
+        <div class="popup" id="popup2">
+            <span class="close" onclick="closePopup('popup2')">&times;</span>
+            <div class="popup-content">
+                <p>Quests & Interactions</p>
+            </div>
+        </div>
+        <div class="popup" id="popup3">
+            <span class="close" onclick="closePopup('popup3')">&times;</span>
+            <div class="popup-content">
+                <p>Settings & Music</p>
+                <button id="music-toggle">Play Music</button>
+            </div>
+        </div>
+        
+        <div class="navigation">
+            <a href="#" class="redArrow">←</a>
+            <a href="#" class="redArrow">↑</a>
+            <a href="barnacresAbandonedHutApproach" class="arrow">↓</a>
+            <a href="#" class="redArrow">→</a>
+        </div>
+    </div>
+    
+    <script src="../../scripts.js"></script>
+    <script src="../../music.js"></script>
+    
+</body>
+</html>
