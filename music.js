@@ -32,7 +32,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             localStorage.setItem('musicPaused', true);
             localStorage.setItem('musicPosition', bgMusic.currentTime);
         } else {
-            localStorage.removeItem('musicPaused');
+            localStorage.setItem('musicPaused', false);
             localStorage.setItem('musicPosition', bgMusic.currentTime);
         }
     });
