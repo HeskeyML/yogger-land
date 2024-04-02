@@ -24,9 +24,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     if (!localStorage.getItem('musicPaused')) {
         bgMusic.currentTime = parseFloat(musicPosition);
         bgMusic.play();
-        isMusicPlaying = true;
-        musicToggle.textContent = 'Pause Music';
     }
+    
     // Save music state to localStorage when leaving the page
     window.addEventListener('beforeunload', function() {
         if (bgMusic.paused) {
