@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const musicPosition = localStorage.getItem('musicPosition');
     
     if (isNaN(musicPosition)) {
-        bgMusic.currentTime = 0.0; 
+        musicPosition = 0.0; 
     }
     
     // Check if music is already playing
