@@ -19,11 +19,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
     
     const bgMusic = document.getElementById('background-music');
     const musicPosition = localStorage.getItem('musicPosition');
-    
-    if (isNaN(musicPosition)) {
-        musicPosition = 0.0; 
-    }
-    
+
+
     // Check if music is already playing
     if (!localStorage.getItem('musicPaused')) {
         bgMusic.currentTime = parseFloat(musicPosition);
