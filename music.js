@@ -1,5 +1,6 @@
 const musicToggle = document.getElementById('music-toggle');
 const backgroundMusic = document.getElementById('background-music');
+const musicPosition = 0.000
 
 let isMusicPlaying = false;
 
