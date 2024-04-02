@@ -1,28 +1,30 @@
 window.addEventListener('DOMContentLoaded', (event) => {
     const bgMusic = document.getElementById('background-music');
-    
-    // Check if music data and playback position are stored in localStorage
-    const musicData = localStorage.getItem('bgMusicData');
-    const musicPosition = parseFloat(localStorage.getItem('bgMusicPosition'));
 
+    // Check if music is already playing
+    const musicData = localStorage.getItem('bgMusicData');
+    const musicPosition = localStorage.getItem('bgMusicPosition');
+    
     if (musicData) {
         // Restore music from local storage
         bgMusic.src = musicData;
-        if (!isNaN(musicPosition)) {
-            bgMusic.currentTime = musicPosition; // Set playback position
-        }
-        if (!localStorage.getItem('musicPaused')) {
-            bgMusic.play();
-        }
+        bgMusic.currentTime = musicPosition ? parseFloat(musicPosition) : 0; // Set playback position
+        bgMusic.play();
+    } else {
+        // Load music from URL and store it in local storage
+        const musicURL = 'url_to_your_music_file.mp3';
+        fetch(musicURL)
+            .then(response => response.blob())
+            .then(blob => {
+                const objectURL = URL.createObjectURL(blob);
+                bgMusic.src = objectURL;
+                localStorage.setItem('bgMusicData', objectURL);
+                bgMusic.play();
+            });
     }
 
-    // Save music state and playback position to localStorage when leaving the page
-    window.addEventListener('beforeunload', function() {
-        if (bgMusic.paused) {
-            localStorage.setItem('musicPaused', true);
-        } else {
-            localStorage.removeItem('musicPaused');
-        }
+    // Save current playback position to local storage periodically
+    setInterval(() => {
         localStorage.setItem('bgMusicPosition', bgMusic.currentTime);
-    });
+    }, 1000); // Save every second (adjust as needed)
 });
