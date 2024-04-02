@@ -1,6 +1,5 @@
 const musicToggle = document.getElementById('music-toggle');
 const backgroundMusic = document.getElementById('background-music');
-localStorage.setItem('musicPosition', 0);
 
 let isMusicPlaying = false;
 
@@ -21,10 +20,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // const bgMusic = document.getElementById('background-music');
     const musicPosition = localStorage.getItem('musicPosition');
 
+    if (isNaN(musicPosition) || !isFinite(musicPosition)) {
+        localStorage.setItem('musicPosition', 0);
+    }
+
     // Check if music is already playing
     if (!localStorage.getItem('musicPaused')) {
         backgroundMusic.currentTime = parseFloat(musicPosition);
         backgroundMusic.play();
+        isMusicPlaying = true;
+        musicToggle.textContent = 'Pause Music';
     }
     
     // Save music state to localStorage when leaving the page
