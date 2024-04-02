@@ -17,18 +17,18 @@ musicToggle.addEventListener('click', function() {
 
 window.addEventListener('DOMContentLoaded', (event) => {
     
-    const bgMusic = document.getElementById('background-music');
+    // const bgMusic = document.getElementById('background-music');
     const musicPosition = localStorage.getItem('musicPosition');
 
     // Check if music is already playing
     if (!localStorage.getItem('musicPaused')) {
-        bgMusic.currentTime = parseFloat(musicPosition);
-        bgMusic.play();
+        backgroundMusic.currentTime = parseFloat(musicPosition);
+        backgroundMusic.play();
     }
     
     // Save music state to localStorage when leaving the page
     window.addEventListener('beforeunload', function() {
-        if (bgMusic.paused) {
+        if (backgroundMusic.paused) {
             localStorage.setItem('musicPaused', true);
             localStorage.setItem('musicPosition', bgMusic.currentTime);
         } else {
