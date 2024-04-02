@@ -6,11 +6,11 @@ let musicPaused = true;
 musicToggle.addEventListener('click', function() {
     if (musicPaused) {
         backgroundMusic.play();
-        isMusicPlaying = true;
+        musicPaused = flase;
         musicToggle.textContent = 'Pause Music';
     } else {
         backgroundMusic.pause();
-        isMusicPlaying = false;
+        musicPaused = true;
         musicToggle.textContent = 'Play Music';
     }
 });
