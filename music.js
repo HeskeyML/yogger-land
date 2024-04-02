@@ -1,38 +1,35 @@
 const musicToggle = document.getElementById('music-toggle');
 const backgroundMusic = document.getElementById('background-music');
 
-let musicPaused = true;
+let isMusicPlaying = false;
 
 musicToggle.addEventListener('click', function() {
-    if (musicPaused) {
-        backgroundMusic.play();
-        musicPaused = false;
-        musicToggle.textContent = 'Pause Music';
-    } else {
+    if (isMusicPlaying) {
         backgroundMusic.pause();
-        musicPaused = true;
+        isMusicPlaying = false;
         musicToggle.textContent = 'Play Music';
+    } else {
+        backgroundMusic.play();
+        isMusicPlaying = true;
+        musicToggle.textContent = 'Pause Music';
     }
 });
 
 window.addEventListener('DOMContentLoaded', (event) => {
-
-    const backgroundMusic = document.getElementById('background-music');
+    const bgMusic = document.getElementById('background-music');
     const musicPosition = localStorage.getItem('musicPosition');
-
     // Check if music is already playing
     if (!localStorage.getItem('musicPaused')) {
-        backgroundMusic.currentTime = parseFloat(musicPosition);
-        backgroundMusic.play();
+        bgMusic.currentTime = parseFloat(musicPosition);
+        bgMusic.play();
     }
-
     // Save music state to localStorage when leaving the page
     window.addEventListener('beforeunload', function() {
-        if (backgroundMusic.paused) {
+        if (bgMusic.paused) {
             localStorage.setItem('musicPaused', true);
             localStorage.setItem('musicPosition', bgMusic.currentTime);
         } else {
-            localStorage.setItem('musicPaused', false);
+            localStorage.removeItem('musicPaused');
             localStorage.setItem('musicPosition', bgMusic.currentTime);
         }
     });
