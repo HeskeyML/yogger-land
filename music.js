@@ -2,7 +2,6 @@ const musicToggle = document.getElementById('music-toggle');
 const backgroundMusic = document.getElementById('background-music');
 localStorage.setItem('musicPosition', 0);
 
-let musicPosition = 0.000
 let isMusicPlaying = false;
 
 musicToggle.addEventListener('click', function() {
