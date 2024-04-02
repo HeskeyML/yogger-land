@@ -20,9 +20,11 @@ musicToggle.addEventListener('click', function() {
 
 window.addEventListener('DOMContentLoaded', (event) => {
     const bgMusic = document.getElementById('background-music');
+    const musicPosition = localStorage.getItem('musicPosition');
 
     // Check if music is already playing
     if (!localStorage.getItem('musicPaused')) {
+        bgMusic.currentTime = parseFloat(musicPosition);
         bgMusic.play();
     }
 
@@ -30,8 +32,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
     window.addEventListener('beforeunload', function() {
         if (bgMusic.paused) {
             localStorage.setItem('musicPaused', true);
+            localStorage.setItem('musicPosition', bgMusic.currentTime);
         } else {
             localStorage.removeItem('musicPaused');
+            localStorage.setItem('musicPosition', bgMusic.currentTime);
         }
     });
 });
