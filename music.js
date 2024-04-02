@@ -1,17 +1,17 @@
 const musicToggle = document.getElementById('music-toggle');
 const backgroundMusic = document.getElementById('background-music');
 
-let isMusicPlaying = false;
+let musicPaused = true;
 
 musicToggle.addEventListener('click', function() {
-    if (isMusicPlaying) {
-        backgroundMusic.pause();
-        isMusicPlaying = false;
-        musicToggle.textContent = 'Play Music';
-    } else {
+    if (musicPaused) {
         backgroundMusic.play();
         isMusicPlaying = true;
         musicToggle.textContent = 'Pause Music';
+    } else {
+        backgroundMusic.pause();
+        isMusicPlaying = false;
+        musicToggle.textContent = 'Play Music';
     }
 });
 
