@@ -6,7 +6,7 @@ let musicPaused = true;
 musicToggle.addEventListener('click', function() {
     if (musicPaused) {
         backgroundMusic.play();
-        musicPaused = flase;
+        musicPaused = false;
         musicToggle.textContent = 'Pause Music';
     } else {
         backgroundMusic.pause();
