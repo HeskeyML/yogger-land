@@ -20,26 +20,26 @@ window.addEventListener('DOMContentLoaded', (event) => {
     // const bgMusic = document.getElementById('background-music');
     const musicPosition = localStorage.getItem('musicPosition');
 
-    if (isNaN(musicPosition) || !isFinite(musicPosition)) {
-        localStorage.setItem('musicPosition', 0);
-    }
+    // if (isNaN(musicPosition) || !isFinite(musicPosition)) {
+    //     localStorage.setItem('musicPosition', 0);
+    // }
 
-    // Check if music is already playing
-    if (!localStorage.getItem('musicPaused')) {
-        backgroundMusic.currentTime = parseFloat(musicPosition);
-        backgroundMusic.play();
-        isMusicPlaying = true;
-        musicToggle.textContent = 'Pause Music';
-    }
+    // // Check if music is already playing
+    // if (!localStorage.getItem('musicPaused')) {
+    //     backgroundMusic.currentTime = parseFloat(musicPosition);
+    //     backgroundMusic.play();
+    //     isMusicPlaying = true;
+    //     musicToggle.textContent = 'Pause Music';
+    // }
     
-    // Save music state to localStorage when leaving the page
-    window.addEventListener('beforeunload', function() {
-        if (backgroundMusic.paused) {
-            localStorage.setItem('musicPaused', true);
-            localStorage.setItem('musicPosition', bgMusic.currentTime);
-        } else {
-            localStorage.removeItem('musicPaused');
-            localStorage.setItem('musicPosition', bgMusic.currentTime);
-        }
-    });
+    // // Save music state to localStorage when leaving the page
+    // window.addEventListener('beforeunload', function() {
+    //     if (backgroundMusic.paused) {
+    //         localStorage.setItem('musicPaused', true);
+    //         localStorage.setItem('musicPosition', bgMusic.currentTime);
+    //     } else {
+    //         localStorage.removeItem('musicPaused');
+    //         localStorage.setItem('musicPosition', bgMusic.currentTime);
+    //     }
+    // });
 });
