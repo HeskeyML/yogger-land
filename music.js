@@ -17,7 +17,7 @@ musicToggle.addEventListener('click', function() {
 
 window.addEventListener('DOMContentLoaded', (event) => {
     
-    // const bgMusic = document.getElementById('background-music');
+    const bgMusic = document.getElementById('background-music');
     localStorage.setItem('musicPosition', bgMusic.currentTime);
     // const musicPosition = localStorage.getItem('musicPosition');
 
