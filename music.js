@@ -19,6 +19,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     
     const bgMusic = document.getElementById('background-music');
     const musicPosition = localStorage.getItem('musicPosition');
+    const musicPaused = localStorage.getItem('musicPaused');
 
     // Check if music is already playing
     if (!localStorage.getItem('musicPaused')) {
