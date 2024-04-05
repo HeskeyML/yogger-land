@@ -8,6 +8,6 @@ localStorage.setItem('goldPieces', goldPieces);
 
 
 
-const inventoryDisplayParagraph = document.getElementById('displayParagraph');
+const inventoryDisplayParagraph = document.getElementById('inventoryDisplayParagraph');
 const inventoryDisplayText = "Gold Pieces: " + goldPieces.toString();
 inventoryDisplayParagraph.textContent = displayText;
