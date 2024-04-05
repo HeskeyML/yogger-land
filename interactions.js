@@ -1,12 +1,9 @@
-const gP = localStorage.getItem('goldPieces');
+let goldPieces = localStorage.getItem('goldPieces');
 
-if (!gP > 0) {
-      gP = 0;
-  }
-
-localStorage.setItem('goldPieces', gP);
-
-
+// If the value is null (doesn't exist), set it to 0
+if (goldPieces === null) {
+    goldPieces = 0;
+}
 
 const inventoryDisplayParagraph = document.getElementById('inventoryDisplayParagraph');
 const inventoryDisplayText = "Gold Pieces: " + goldPieces.toString();
