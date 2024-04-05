@@ -7,4 +7,4 @@ if (goldPieces === null) {
 
 const inventoryDisplayParagraph = document.getElementById('inventoryDisplayParagraph');
 const inventoryDisplayText = "Gold Pieces: " + goldPieces.toString();
-inventoryDisplayParagraph.textContent = displayText;
+inventoryDisplayParagraph.textContent = inventoryDisplayText;
