@@ -1,1 +1,1 @@
-code
+const goldPieces = localStorage.getItem('goldPieces');
