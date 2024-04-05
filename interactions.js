@@ -1,10 +1,10 @@
-const goldPieces = localStorage.getItem('goldPieces');
+const gP = localStorage.getItem('goldPieces');
 
-if (!goldPieces > 0) {
-      goldPieces = 0;
+if (!gP > 0) {
+      gP = 0;
   }
 
-localStorage.setItem('goldPieces', goldPieces);
+localStorage.setItem('goldPieces', gP);
 
 
 
